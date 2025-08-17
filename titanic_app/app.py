@@ -1,5 +1,6 @@
 import streamlit as st
 import pickle
+import numpy as np
 
 model = pickle.load(open("model.pkl", "rb"))
 st.write("Model loaded successfully.")
@@ -29,5 +30,3 @@ if st.button("Submit"):
     prediction = model.predict(features)
     result = "Survived" if prediction[0]==1 else "Died"
     st.success(f'Prediction Result is {result} ')
-
-
