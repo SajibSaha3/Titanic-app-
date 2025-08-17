@@ -1,8 +1,8 @@
 import streamlit as st
 import pickle
-import numpy as np
 
-model= pickle.load(open("model.pkl", "rb"))
+model = pickle.load(open("model.pkl", "rb"))
+st.write("Model loaded successfully.")
 
 st.title("Titanic survival Analysis system")
 st.write("Identify a person is survived or not")
